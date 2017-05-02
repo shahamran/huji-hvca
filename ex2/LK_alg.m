@@ -23,15 +23,15 @@ function  v = LK_alg(I1, I2, lambda, mask, ...
         Ix = Ix .* newMask;
         Iy = Iy .* newMask;
         It = It .* newMask;
-        At(:, :, 1) = Ix .^ 2;
+        At(:, :, 1) = Ix.^2;
         At(:, :, 2) = Ix .* Iy;
         At(:, :, 3) = At(:, :, 2);
-        At(:, :, 4) = Iy .^ 2;
+        At(:, :, 4) = Iy.^2;
         Bt(:, :, 1) = Ix .* It;
         Bt(:, :, 2) = Iy .* It;
-        A = reshape(sum(sum(At, 1), 2), 2, 2) + eye(2) .* lambda;
+        A = reshape(sum(sum(At, 1), 2), 2, 2) + eye(2).*lambda;
         B = -reshape(sum(sum(Bt, 1), 2), 2, 1);
-        v = A \ B;
+        v = v + A \ B;
     end
 
 end

@@ -8,7 +8,7 @@ function v = Full_LK(I1, I2, lambda, mask, num_iterations)
     I2b = blur_downsample(I2);
     v = LK_alg(I1b, I2b, lambda, mask(1:2:end, 1:2:end), v, 1);
     % run the algorithm with the initial guess
-    v = LK_alg(I1, I2, lambda, mask, v .* 2, num_iterations);
+    v = LK_alg(I1, I2, lambda, mask, v.*2, num_iterations);
 
 end
 
