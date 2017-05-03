@@ -5,19 +5,31 @@ I2 = im2double(imread('flower-i2.tif'));
 mymovie(I1, I2);
 
 % define the algorithm's parameters
-treeMask = zeros(size(I1));
-treeMask(10:50, 90:130) = 1;
-flowersMask = zeros(size(I1));
-flowersMask(90:end, 1:90) = 1;
+treeMasks = zeros(size(I1,1), size(I1,2), 3);
+flowersMasks = zeros(size(I1,1), size(I1,2), 3);
+treeMasks(1:40, 90:130, 1) = 1;
+treeMasks(41:80, 90:130, 2) = 1;
+treeMasks(81:end, 90:130, 3) = 1;
+flowersMasks(90:end, 1:40, 1) = 1;
+flowersMasks(85:end, 41:80, 2) = 1;
+flowersMasks(80:end, 140:end, 3) = 1;
 lambda = 0;
 num_iterations = 100;
 
-% run LK once on the tree and once on the flowers
-v_tree = Full_LK(I1, I2, lambda, treeMask, num_iterations)
-% v_tree = [-2.6017; -0.7671]
+v_tree = zeros(2, 1, 3);
+v_flowers = zeros(2, 1, 3);
 
-v_flowers = Full_LK(I1, I2, lambda, flowersMask, num_iterations)
-% v_flowers = [-1.1675, -0.0010]
+% for each tree/flowers subimage, run the LK algorithm
+for i = 1:3
+    v_tree(:,:, i) = Full_LK(I1, I2, lambda, treeMasks(:,:,i), ...
+                             num_iterations);
+    v_flowers(:,:, i) = Full_LK(I1, I2, lambda, ...
+                                flowersMasks(:,:,i), num_iterations);
+end
+v_tree
+v_flowers
+mean_v_tree = mean(v_tree, 3)
+mean_v_flowers = mean(v_flowers, 3)
 
 %% question 6
 REAL_VELOCITY = 1;
@@ -33,6 +45,7 @@ maxVelocity = squareSize / 3;
 velocities = (-maxVelocity):maxVelocity;
 results = zeros(length(velocities), 2);
 
+figure;
 hold on;
 for sigma = sigmas
     firstFrame = GausSpot(squareSize, sigma, [0, 0]);
@@ -57,24 +70,31 @@ legend(['\sigma = ', num2str(sigmas(1))], ...
        ['\sigma = ', num2str(sigmas(2))]);
 
 %% question 7
+% constants
+fatStr = {'Thin', 'Fat'};
 THIN = 0;
 FAT = 1;
 lambda = 0.01;
-contrasts = 1:-0.2:0;
-iters = [5, 25, 125];
+contrasts = 1:-0.01:0;
+iters = [2, 10, 70];
+legends = cell(2, numel(iters));
 
-result = zeros(numel(contrasts), numel(iters), 2);
-for i = 1:numel(contrasts)
-    contrast = contrasts(i);
-    for k = [THIN, FAT]
-        [rhom1, rhom2] = rhombusMovie(k, contrast);
-        mask = ones(size(rhom1));
-        for j = 1:numel(iters)
-            iter = iters(j);
-            v = Full_LK(rhom1, rhom2, lambda, mask, iter);
-            results(i, j, k+1) = v;
-        end
+% plotting
+fatRhom = rhombusMovie(1, 1);
+thinRhom = rhombusMovie(0, 1);
+figure; imshow([fatRhom, thinRhom]);
+title('Fat rhombus on the left, thin on the right');
+
+for fatFlag = [THIN, FAT]
+    figure;
+    for i = 1:numel(iters)
+        iter = iters(i);
+        hold all;
+        plotRhombus(fatFlag, lambda, iter);
+        legends{1, i} = sprintf('v_x - %d iterations', iter);
+        legends{2, i} = sprintf('v_y - %d iterations', iter);
     end
+    legend(legends{:})
+    title([fatStr{fatFlag+1}, ' rhombus - calculated velocity']);
+    hold off;
 end
-plot(contrasts, results(:, 1, 1));
-figure;plot(contrasts, results(:, 1, 2));
