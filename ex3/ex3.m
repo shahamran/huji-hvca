@@ -10,7 +10,7 @@ Q12_DATA = 'couch';
 %% question 4
 figure();
 % read the image & compute laplacian (absolute value)
-I = im2double(imread(Q4_IMAGE));
+I = double(imread(Q4_IMAGE));
 [m, n] = size(I);
 [Ix, Iy] = ImageDerivatives(I);
 L = abs(Deriv2Laplace(Ix, Iy));
@@ -21,13 +21,13 @@ leftL = L(1:end, 1:(n/2-5));
 rightL = L(1:end, (n/2+5):end);
 
 epsilon = 10;
-T_space = (unique(L) - max(L(:))/10)';
+T_space = 1:10;
 
 for T = T_space
     if (length(find(leftL > T)) > epsilon) && ...
        (length(find(rightL > T)) <= epsilon)
-        fprintf('Found T = %.2f\n', T);
-        break;  % the result is T = 0.05 (approximately)
+        fprintf('Found T = %u\n', T);
+        break;  % the result is T = 8
     end
 end
 fprintf('Number of pixels > T in the left image = %u\n', ...
@@ -35,22 +35,25 @@ fprintf('Number of pixels > T in the left image = %u\n', ...
 fprintf('Number of pixels > T in the right image = %u\n', ...
         length(find(rightL > T))); % == 4
 show(L > T);
-title(sprintf('Laplacian > T where T = %f', T));
+title(['Laplacian > T where T = ', num2str(T)]);
 
 %% question 5
 figure();
-I = im2double(imread(Q5_IMAGE));
+I = double(imread(Q5_IMAGE));
+show(I, [0 255]);
 [Ix, Iy] = ImageDerivatives(I);
 L = abs(Deriv2Laplace(Ix, Iy));
 Diag = logical(eye(length(L)));
 Diag = Diag | rot90(Diag);
 noDiag = not(Diag);
-T_space = unique(L)';
+T_space = 1:10;
+epsilon = 0.8;
 
+figure();
 for T = T_space
     if (~isempty(find(L(Diag) > T, 1))) && ...
          isempty(find(L(noDiag) > T, 1))
-        fprintf('Found T = %.3f\n', T);
+        fprintf('Found T = %u\n', T);
         break;
     end
 end
@@ -59,10 +62,10 @@ end
 % show that this threshold is tight:
 subplot(1, 2, 1);
 show(L > T);
-title(sprintf('Laplacian > T where T = %f', T));
+title(sprintf('Laplacian > T where T = %u', T));
 subplot(1, 2, 2);
-show(L > (T-0.001));
-title(sprintf('Laplacian > T where T = %f', T-0.001));
+show(L > (T-epsilon));
+title(sprintf('Laplacian > T where T = %.2f', T-epsilon));
 % number of pixels > T on every part of the image
 fprintf('Number of pixels > T on diagonal = %u\n', ...
     length(find(L(Diag) > T)));  % == 52
@@ -71,23 +74,22 @@ fprintf('Number of pixels > T NOT on diagonal = %u\n', ...
 
 %% question 6
 figure();
-I = im2double(imread(Q6_IMAGE));
+I = double(imread(Q6_IMAGE));
+show(I, [0 255]);
 [Ix, Iy] = ImageDerivatives(I);
 L = abs(Deriv2Laplace(Ix, Iy));
 
-T_space = (min(L(:))+0.001):0.02:(max(L(:))/2); 
-% size(T_space) == (1, 6)
+figure();
+T_space = 5:5:25;
+k = numel(T_space);
 rows = 2;
-cols = 3;
-i = 1;
-for col = 1:cols
-    for row = 1:rows
-        subplot(rows, cols, i);
-        T = T_space(i);
-        i = i + 1;
-        show(L > T);
-        title(sprintf('T = %.3f', T));
-    end
+cols = ceil(k/2);
+
+for i = 1:k    
+    subplot(rows, cols, i);
+    T = T_space(i);
+    show(L > T);
+    title(sprintf('T = %u', T));
 end
 
 %% question 9

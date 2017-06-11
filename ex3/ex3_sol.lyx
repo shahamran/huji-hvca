@@ -680,6 +680,22 @@ Z=X*Y
 תכנותי
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+FloatBarrier
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section*
 שאלה
 \family roman
@@ -710,29 +726,13 @@ Z=X*Y
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-FloatBarrier
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 הריבוע השמאלי נראה בהיר יותר.
  לאחר חיפוש אחר ערכי 
 \begin_inset Formula $T$
 \end_inset
 
  אפשריים, מצאנו כי 
-\begin_inset Formula $T\approx0.05$
+\begin_inset Formula $T=8$
 \end_inset
 
  מקיים את התכונה הבאה: עבור החצי השמאלי של התמונה ישנם 
@@ -808,7 +808,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ex3q4.svg
-	width 70text%
+	width 90text%
 
 \end_inset
 
@@ -933,6 +933,22 @@ status open
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+FloatBarrier
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section*
 שאלה
 \family roman
@@ -963,29 +979,13 @@ status open
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-FloatBarrier
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 כמובן שניתן להבחין בצלב הבהיר על אלכסוני התמונה )פינות הריבועים(.
  גם כאן, לאחר חיפוש ממצה על ערכי 
 \begin_inset Formula $T$
 \end_inset
 
  אפשריים התקבל ש-
-\begin_inset Formula $T\approx0.017$
+\begin_inset Formula $T=5$
 \end_inset
 
  מקיים את התכונה: ישנם פיקסלים גדולים מ-
@@ -1042,7 +1042,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ex3q5.svg
-	width 70text%
+	width 90text%
 
 \end_inset
 
@@ -1103,12 +1103,25 @@ status open
 \uwave default
 \noun default
 \color inherit
-- הלפלסיאן בפינות הריבוע )על האלכסון( גדול מ-
+- משמאל: הלפלסיאן בפינות הריבוע )על האלכסון( גדול מ-
 \begin_inset Formula $T$
 \end_inset
 
  ובשאר התמונה קטן מ-
 \begin_inset Formula $T$
+\end_inset
+
+; מימין: תמונה דומה עבור ערך סף 
+\begin_inset Formula $T-\varepsilon$
+\end_inset
+
+ - כלומר מראה שהסף 
+\begin_inset Formula $T$
+\end_inset
+
+ שמצאנו הדוק
+\end_layout
+
 \end_inset
 
 
@@ -1117,6 +1130,17 @@ status open
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+FloatBarrier
 \end_layout
 
 \end_inset
@@ -1151,22 +1175,6 @@ status open
 \noun default
 \color inherit
 6
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-FloatBarrier
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1236,7 +1244,7 @@ status open
 \align center
 \begin_inset Graphics
 	filename ex3q6.svg
-	width 70text%
+	width 90text%
 
 \end_inset
 
@@ -1313,34 +1321,7 @@ status open
 \begin_inset Formula $T$
 \end_inset
 
- עבור 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\numeric on
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-6
-\numeric off
- 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-ערכי 
+ עבור ערכי 
 \begin_inset Formula $T$
 \end_inset
 
@@ -1355,6 +1336,22 @@ status open
 \end_inset
 
 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+FloatBarrier
 \end_layout
 
 \end_inset
@@ -1392,24 +1389,12 @@ status open
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-FloatBarrier
-\end_layout
-
+כפי שראינו בשאלות 
+\begin_inset Formula $6$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-כפי שראינו בשאלות 
-\begin_inset Formula $4-6$
+-
+\begin_inset Formula $4$
 \end_inset
 
 , חלק מהאשליות ניתן להסביר באמצעות ה-
@@ -1581,35 +1566,6 @@ prior
  מאפייני התמונה במקרה הזה יתפסו תפקיד משני בהבנת הצבע של הטבעת.
 \end_layout
 
-\begin_layout Section*
-שאלה
-\family roman
-\series bold
-\shape up
-\size larger
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\numeric on
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-8
-\end_layout
-
 \begin_layout Standard
 \begin_inset ERT
 status open
@@ -1653,6 +1609,259 @@ FloatBarrier
 \noun default
 \color inherit
 9
+\end_layout
+
+\begin_layout Standard
+עבור הגירוי הנוצר עם
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family typewriter
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+twoSquares(1)
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+וערך סף 
+\begin_inset Formula $T=0.07$
+\end_inset
+
+ האלגוריתם מחזיר בדיוק את אותו ערך
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+reflectance
+\lang hebrew
+.
+ עבור הגירוי השני האלגוריתם מחזיר ערך החזרה משתנה בתוך הריבוע המוצל - כלומר
+ מחזיר שהריבוע המוצל כהה יותר במרכזו ובהיר יותר בפריפריה - בהתאמה לצל העמום
+ המוטל עליו.
+ 
+\end_layout
+
+\begin_layout Standard
+נזכור כי ההנחות עליהן האלג' מתבסס הן:
+\end_layout
+
+\begin_layout Itemize
+ג
+\end_layout
+
+\begin_layout Itemize
+ד
+\end_layout
+
+\begin_layout Standard
+ההנחה המופרת היא 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+להשלים
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+שינוי ערכי 
+\begin_inset Formula $T$
+\end_inset
+
+ לא עוזר, כפי שאפשר לראות באיור.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ex3q9a.svg
+	width 90text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ex3q9b.svg
+	width 80text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+שאלה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+9
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+- 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+להשלים
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1701,6 +1910,113 @@ FloatBarrier
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ex3q10.svg
+	width 90text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+שאלה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+10
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+- 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+להשלים
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -1746,6 +2062,125 @@ FloatBarrier
 \end_layout
 
 \begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ex3q11.svg
+	width 90text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+שאלה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+11
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+- 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+להשלים
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -1788,6 +2223,125 @@ FloatBarrier
 \noun default
 \color inherit
 12
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ex3q12.svg
+	width 90text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+שאלה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+12
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+- 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+להשלים
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1870,7 +2424,7 @@ FloatBarrier
 \end_layout
 
 \begin_layout Section*
-שאלה
+שאלות
 \family roman
 \series bold
 \shape up
@@ -1895,123 +2449,7 @@ FloatBarrier
 \uwave default
 \noun default
 \color inherit
-3
-\end_layout
-
-\begin_layout Section*
-שאלה
-\family roman
-\series bold
-\shape up
-\size larger
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\numeric on
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-4
-\end_layout
-
-\begin_layout Section*
-שאלה
-\family roman
-\series bold
-\shape up
-\size larger
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\numeric on
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-5
-\end_layout
-
-\begin_layout Section*
-שאלה
-\family roman
-\series bold
-\shape up
-\size larger
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\numeric on
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-6
-\end_layout
-
-\begin_layout Section*
-שאלה
-\family roman
-\series bold
-\shape up
-\size larger
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\numeric on
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-7
+4-12
 \end_layout
 
 \begin_layout Section*
@@ -2041,122 +2479,6 @@ FloatBarrier
 \noun default
 \color inherit
 8
-\end_layout
-
-\begin_layout Section*
-שאלה
-\family roman
-\series bold
-\shape up
-\size larger
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\numeric on
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-9
-\end_layout
-
-\begin_layout Section*
-שאלה
-\family roman
-\series bold
-\shape up
-\size larger
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\numeric on
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-10
-\end_layout
-
-\begin_layout Section*
-שאלה
-\family roman
-\series bold
-\shape up
-\size larger
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\numeric on
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-11
-\end_layout
-
-\begin_layout Section*
-שאלה
-\family roman
-\series bold
-\shape up
-\size larger
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\numeric on
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-12
 \end_layout
 
 \end_body
