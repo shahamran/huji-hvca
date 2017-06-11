@@ -1,6 +1,5 @@
 function [R, L] = do_retinex(I, T)
-%DO_RETINEX Summary of this function goes here
-%   Detailed explanation goes here
+%DO_RETINEX run the retinex algorithm with a given image I and threshold T
 
     % take the log of I and compute its derivative
     logI = log(I);

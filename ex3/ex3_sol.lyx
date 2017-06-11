@@ -801,7 +801,7 @@ FloatBarrier
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -933,22 +933,6 @@ status open
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-FloatBarrier
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section*
 שאלה
 \family roman
@@ -1035,7 +1019,7 @@ FloatBarrier
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -1132,22 +1116,6 @@ status open
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-FloatBarrier
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section*
 שאלה
 \family roman
@@ -1237,7 +1205,7 @@ FloatBarrier
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -1336,22 +1304,6 @@ status open
 \end_inset
 
 
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-FloatBarrier
 \end_layout
 
 \end_inset
@@ -1564,6 +1516,7 @@ prior
  תחת ההנחה שאובייקט מאותו חומר הוא בעל גוון אחיד, נתפוס את שני חציי הטבעת
  כבעלי צבע שונה )בגלל ההבדל הגדול בצבעים בין הרקע הימני לשמאלי(.
  מאפייני התמונה במקרה הזה יתפסו תפקיד משני בהבנת הצבע של הטבעת.
+ במילים אחרות, ידע סמנטי )"גבוה"( משפיע על תהליכי תפיסה "נמוכים".
 \end_layout
 
 \begin_layout Standard
@@ -1705,25 +1658,26 @@ reflectance
 \end_layout
 
 \begin_layout Itemize
-ג
+שינוי בסיגנל הוא שינוי במקדם ההחזרה או בתאורה, אך לא בשניהם
 \end_layout
 
 \begin_layout Itemize
-ד
+שינוי חד בתמונה הוא שינוי במקדם ההחזרה ואילו שינוי הדרגתי הוא שינוי בתאורה
 \end_layout
 
 \begin_layout Standard
-ההנחה המופרת היא 
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-להשלים
-\end_layout
-
+ההנחה המופרת בגירוי השני היא ההנחה לפיה השינוי בסיגנל הוא רק באחד מהגורמים,
+ ולא בשניהם.
+ במקרה זה, הריבוע התחתון מורכב מסיגנל משתנה הן בגלל הצל המוטל עליו והן בגלל
+ ההפרדה שלו מהרקע.
+ שני הגורמים משתנים במקביל ואילו האלגוריתם שמתבסס על הנחה 
+\begin_inset Formula $\left(1\right)$
 \end_inset
 
-
+ משווה את ה)שינוי ב(סיגנל לערך הסף כדי להפריד כל שינוי לאחד משני הגורמים
+ האפשריים.
+ כאשר שני הגורמים לא ברי הפרדה, השוואה כזו לסף נאיבי אינה יעילה ובטח שלא
+ יכולה לחלץ את מידת השינוי בשני הגורמים ביחד.
 \end_layout
 
 \begin_layout Standard
@@ -1731,7 +1685,7 @@ status open
 \begin_inset Formula $T$
 \end_inset
 
- לא עוזר, כפי שאפשר לראות באיור.
+ לא עוזר, כפי שאפשר לראות באיור ובהתאם לנדון למעלה.
  
 \end_layout
 
@@ -1739,7 +1693,7 @@ status open
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Graphics
@@ -1817,41 +1771,9 @@ status open
 \uwave default
 \noun default
 \color inherit
-- 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-להשלים
-\end_layout
-
-\end_inset
-
-
+- על גירוי המקיים את ההנחות האלגוריתם מבצע בצורה מושלמת )עם ערך הסף הנבחר(.
+ עבור הגירוי השני, אף ערך סף לא נותן תוצאה מושלמת )כפי שאפשר לראות בגרפים
+ התחתונים(
 \end_layout
 
 \end_inset
@@ -1910,10 +1832,62 @@ FloatBarrier
 \end_layout
 
 \begin_layout Standard
+הנקודות אכן בגוון זהה: 
+\begin_inset Formula $A=B=0.4196$
+\end_inset
+
+.
+ אחרי הרצת האלגוריתם, בתמונת מקדמי ההחזרה המתקבלת מתקיים ש-
+\begin_inset Formula $R\left(A\right)=0.566<0.876=R\left(B\right)$
+\end_inset
+
+, בהתאמה לחוויית האשליה.
+ הנקודה 
+\begin_inset Formula $A$
+\end_inset
+
+ נתפסת כאפורה כהה יחסית, בעוד ש-
+\begin_inset Formula $B$
+\end_inset
+
+ נתפסת כלבנה.
+\end_layout
+
+\begin_layout Standard
+על לוח השחמט האלגוריתם מחזיר תוצאות לא רעות, אם כי לא מושלמות.
+ ניתן לראות שהריבועים השחורים בצל כהים יותר מאלה מחוץ לצל ובאופן דומה עבור
+ ריבועים בהירים, אע"פ שהאנחנו תופסים אותם כבעלי צבע )מקדם החזרה( זהה.
+ גם הגליל מקבל ערכי מקדם החזרה שונים בחלקיו השונים בשונה מהתפיסה.
+\end_layout
+
+\begin_layout Standard
+גם כאן מופרת הנחת השינוי הבודד - הצל מוטל על אזורים בהם ישנו גם שינוי בצבע
+ המשבצת, ולכן שינוי ערך הסף לא יפתור את טעות האלגוריתם בחלק זה.
+ בנוסף, מופרת גם ההנחה השנייה לפיה שינוי חד בסיגנל הוא כתוצאה משינוי במקדם
+ ההחזרה - למשל בחלקו העליון של הגליל קיים שינוי חד שנובע משינוי בתאורה ולא
+ ב-
+\begin_inset Formula $\rho$
+\end_inset
+
+.
+ באופן דומה גם בחלקו הימני
+\numeric on
+-
+\numeric off
+תחתון של הגליל יש שינוי קטן בסיגנל שנובע משינוי ב-
+\begin_inset Formula $\rho$
+\end_inset
+
+ ולא משינוי בתאורה.
+ גם כאן, שינוי ערך הסף לא צפוי לשפר את התוצאה מסיבות דומות לאלו שהוצגו בשאלה
+ הקודמת.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -1981,29 +1955,9 @@ status open
 \uwave default
 \noun default
 \color inherit
-- 
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-להשלים
-\end_layout
-
-\end_inset
-
-
+- על לוח השחמט הנחות האלגוריתם מתקיימות בצורה לא רעה ולכן גם ביצועי האלגוריתם
+ בהתאם.
+ על הגליל התוצאות בינוניות בגלל הפרת ההנחות.
 \end_layout
 
 \end_inset
@@ -2062,10 +2016,69 @@ FloatBarrier
 \end_layout
 
 \begin_layout Standard
+האלגוריתם נכשל בהסרת הצל.
+ כפי שנדון בסעיפים הקודמים, ההנחה לפי שינוי חזק בסיגנל הוא תוצאה של שינוי
+ מקדם ההחזרה אינה מתקיימת.
+ לפיכך, הגדלת 
+\begin_inset Formula $T$
+\end_inset
+
+ תוביל לסיווג של שינויים חדים יותר כנובעים משינויי תאורה "תעלים" את הצל.
+ עם זאת, מכיוון שהשינוי בסיגנל באזור קצוות הצל דומה לשינוי בקצוות היד, ולכן
+ גם ההבדל בין היד למשטח )הרקורטן?( תסווג כשינוי בתאורה, וגם זו תוצאה שגוייה.
+\end_layout
+
+\begin_layout Standard
+רמזים שאפשר להוסיף לאלגוריתם הם "מסכה" במימדים זהים לתמונה המקורית, עם ערכים
+ 
+\begin_inset Formula $\left\{ 1,\dots,k\right\} $
+\end_inset
+
+ עבור קבוע 
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+.
+ תמונה זו תציין לאלגוריתם שבמקומות בהם הערך במסכה זהה, החומר בתמונה המקורית
+ זהה.
+ כך, כאשר נבדק תנאי ה-
+\lang english
+threshold
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+בקורדינטה כלשהי, נפסול סיווג שינוי בסיגנל כשינוי בתאורה אם הערכים במסכה
+ בקורדינטה זו זהים.
+ באופן דומה, אפשר להזין מסכה דומה המתארת אזורים עם תאורה דומה ושינוי אנלוגי
+ לזה שהוצג קודם בתנאי הסף.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -2145,29 +2158,7 @@ status open
 \uwave off
 \noun off
 \color none
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-להשלים
-\end_layout
-
-\end_inset
-
-
+כישלון בהסרת הצל - כאשר מגדילים את ערך הסף הצל נבלע במשטח, אך גם יד האצן.
 \end_layout
 
 \end_inset
@@ -2226,10 +2217,36 @@ FloatBarrier
 \end_layout
 
 \begin_layout Standard
+קל לראות שהאלגוריתם מסיר את הצל בהצלחה, עבור ערכי 
+\begin_inset Formula $T$
+\end_inset
+
+ לא קטנים מדי.
+ עבור ערכי הסף הגדולים יותר, גם השינויים בתאורה בגב הספה )איפה שהכפתורים(
+ נעלמים, ואנחנו מקבלים תמונה כמעט מושלמת של מקדמי ההחזרה כפי שהם נתפסים.
+\end_layout
+
+\begin_layout Standard
+בתמונה זו ההנחות של האלגוריתם מתקיימות בצורה טובה: שינויים חדים בסיגנל נובעים
+ משינוי בחומר ושינויים חלשים נובעים משינוי בתאורה.
+ 
+\end_layout
+
+\begin_layout Standard
+ההבדל האיכותי בין תמונה זו לבין התמונות הקודמות, לדעתנו, הוא הפשטות של התמונה
+ - הגיאומטריה של האובייקט המוצג היא פשוטה )משטחים ארוכים וישרים, אין רקע,
+ אין עצמים עגולים המחזירים אור בצורה משתנה לאורך פני שטחם וכו'( וכן התאורה
+ היא אחידה ונראית כמוטלת ממקור יחיד מגבוה.
+ לעומתה, בתמונה הקודמת יש הרבה פרטים ושינויים חזקים בסיגנל שנובעים מתאורה
+ חזקה ומשטחים מורכבים )הידיים( המחזירים את האור בצורה שונה באופן דרמטי בחלקיהם
+ השונים.
+\end_layout
+
+\begin_layout Standard
 \begin_inset Float figure
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \noindent
@@ -2309,29 +2326,12 @@ status open
 \uwave off
 \noun off
 \color none
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-
-\family roman
-\series medium
-\shape up
-\size normal
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
-להשלים
-\end_layout
-
+אין הרבה הבדל בין ערכי 
+\begin_inset Formula $T$
 \end_inset
 
-
+ השונים )למעט אולי הקטן ביותר בו האלגוריתם לא ממש עובד( - כולם מצליחים במידה
+ סבירה.
 \end_layout
 
 \end_inset
@@ -2363,122 +2363,6 @@ FloatBarrier
 \begin_layout Part
 \start_of_appendix
 קוד
-\end_layout
-
-\begin_layout Section*
-שאלה
-\family roman
-\series bold
-\shape up
-\size larger
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\numeric on
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-1
-\end_layout
-
-\begin_layout Section*
-שאלה
-\family roman
-\series bold
-\shape up
-\size larger
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\numeric on
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-2
-\end_layout
-
-\begin_layout Section*
-שאלות
-\family roman
-\series bold
-\shape up
-\size larger
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\numeric on
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-4-12
-\end_layout
-
-\begin_layout Section*
-שאלה
-\family roman
-\series bold
-\shape up
-\size larger
-\emph off
-\bar no
-\strikeout off
-\uuline off
-\uwave off
-\noun off
-\color none
- 
-\family default
-\series default
-\shape default
-\size default
-\emph default
-\numeric on
-\bar default
-\strikeout default
-\uuline default
-\uwave default
-\noun default
-\color inherit
-8
 \end_layout
 
 \end_body
