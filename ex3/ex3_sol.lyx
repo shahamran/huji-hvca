@@ -8,6 +8,7 @@
 \begin_preamble
 \usepackage{pgf}
 \usepackage{tikz}
+\usepackage{placeins}
 \usetikzlibrary{arrows,automata,positioning}
 \end_preamble
 \use_default_options true
@@ -708,6 +709,230 @@ Z=X*Y
 4
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+FloatBarrier
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+הריבוע השמאלי נראה בהיר יותר.
+ לאחר חיפוש אחר ערכי 
+\begin_inset Formula $T$
+\end_inset
+
+ אפשריים, מצאנו כי 
+\begin_inset Formula $T\approx0.05$
+\end_inset
+
+ מקיים את התכונה הבאה: עבור החצי השמאלי של התמונה ישנם 
+\begin_inset Formula $1,000<$
+\end_inset
+
+ פיקסלים שערכם בערך מוחלט גדול מ-
+\begin_inset Formula $T$
+\end_inset
+
+; עבור החצי הימני ישנם
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+פיקסלים כאלה.
+ באיור המצורף אפשר לראות תכונה זאת.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ex3q4.svg
+	width 70text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+שאלה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+4
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+- הלפלסיאן בריבוע השמאלי גדול מ-
+\begin_inset Formula $T$
+\end_inset
+
+ ובריבוע הימני קטן מ-
+\begin_inset Formula $T$
+\end_inset
+
+ )למעט
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ב-
+\numeric on
+4
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ פינות הריבוע(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section*
 שאלה
 \family roman
@@ -735,6 +960,168 @@ Z=X*Y
 \noun default
 \color inherit
 5
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+FloatBarrier
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כמובן שניתן להבחין בצלב הבהיר על אלכסוני התמונה )פינות הריבועים(.
+ גם כאן, לאחר חיפוש ממצה על ערכי 
+\begin_inset Formula $T$
+\end_inset
+
+ אפשריים התקבל ש-
+\begin_inset Formula $T\approx0.017$
+\end_inset
+
+ מקיים את התכונה: ישנם פיקסלים גדולים מ-
+\begin_inset Formula $T$
+\end_inset
+
+ על אלכסון התמונה )
+\numeric on
+52
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+כאלה( וכן 
+\emph on
+אין
+\emph default
+ פיקסלים גדולים מ-
+\begin_inset Formula $T$
+\end_inset
+
+ מחוץ לאלכסון.
+ כמו בשאלה הקודמת, האיור המצורף מתאר את הממצא.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ex3q5.svg
+	width 70text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+שאלה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+5
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+- הלפלסיאן בפינות הריבוע )על האלכסון( גדול מ-
+\begin_inset Formula $T$
+\end_inset
+
+ ובשאר התמונה קטן מ-
+\begin_inset Formula $T$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*
@@ -766,6 +1153,215 @@ Z=X*Y
 6
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+FloatBarrier
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+לאחר חיפוש ממצה על ערכי 
+\begin_inset Formula $T$
+\end_inset
+
+ אפשריים, לא מצאנו ערך שיכול להסביר את התופעה - כלומר לא קיים ערך 
+\begin_inset Formula $T$
+\end_inset
+
+ עבורו הלפלסיאן בחצי הטבעת העליון גדול מ-
+\begin_inset Formula $T$
+\end_inset
+
+ ובחצי התחתון קטן מ-
+\begin_inset Formula $T$
+\end_inset
+
+.
+ נסיק שלא קיים 
+\begin_inset Formula $T$
+\end_inset
+
+ כזה - כי כמות הפיקסלים בשני חציי הטבעת יורדת באופן הדרגתי ל-
+\numeric on
+0
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+עבור ערכי 
+\begin_inset Formula $T$
+\end_inset
+
+ גדלים, ובקצב דומה בשניהם )ראו איור(.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename ex3q6.svg
+	width 70text%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+שאלה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+6
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+- 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ערכי הלפלסיאן הגדולים מ-
+\begin_inset Formula $T$
+\end_inset
+
+ עבור 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+6
+\numeric off
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ערכי 
+\begin_inset Formula $T$
+\end_inset
+
+ שונים.
+ אפשר לראות שאין ערך בו החלק העליון הוא בעל יותר פיקסלים הגדולים מ-
+\begin_inset Formula $T$
+\end_inset
+
+ גדול מבחלק התחתון.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section*
 שאלה
 \family roman
@@ -793,6 +1389,196 @@ Z=X*Y
 \noun default
 \color inherit
 7
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+FloatBarrier
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כפי שראינו בשאלות 
+\begin_inset Formula $4-6$
+\end_inset
+
+, חלק מהאשליות ניתן להסביר באמצעות ה-
+\lang english
+Laplacian
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+וחלק לא.
+ בפרט, ראינו שאת האשליות שהופיעו בשאלות 
+\begin_inset Formula $4,5$
+\end_inset
+
+ ניתן להסביר באופן זה וזו שב-
+\begin_inset Formula $6$
+\end_inset
+
+ לא.
+\end_layout
+
+\begin_layout Standard
+היפותזה אלטרנטיבית היא שהצבע הנתפס הוא פונקצייה כלשהי של מאפיינים בסיסיים
+ בתמונה ושל ידע מוקדם )
+\lang english
+prior
+\lang hebrew
+( לגבי התמונה )או לגבי תמונות טבעיות, באופן כללי(.
+ כלומר, ישנה רגולריות בתמונות אותה אנחנו לומדים ומנסים להכליל לתמונות חדשות.
+ דוגמה ל-
+\lang english
+prior
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+כזה הוא שלכל חומר יש גוון אחיד.
+ כלל זה יסביר את האפקט ב-
+\lang english
+kofka-ring
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+באופן הבא: אנחנו תופסים את החצי התחתון של הטבעת כעשוי מאותו "חומר" של הרקע
+ השמאלי, ואת החצי העליון כמאותו חומר של הרקע הימני.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+גם כאן נכנס
+\family roman
+\series medium
+\shape up
+\size small
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+\lang english
+prior
+\family roman
+\series medium
+\shape up
+\size small
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang hebrew
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+לפיו אובייקטים הם בעלי צורה "חלקה" יחסית, כלומר הם לא נחתכים ומשתנים במהירות
+ גדולה מדי.
+\end_layout
+
+\end_inset
+
+ תחת ההנחה שאובייקט מאותו חומר הוא בעל גוון אחיד, נתפוס את שני חציי הטבעת
+ כבעלי צבע שונה )בגלל ההבדל הגדול בצבעים בין הרקע הימני לשמאלי(.
+ מאפייני התמונה במקרה הזה יתפסו תפקיד משני בהבנת הצבע של הטבעת.
 \end_layout
 
 \begin_layout Section*
@@ -824,6 +1610,22 @@ Z=X*Y
 8
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+FloatBarrier
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section*
 שאלה
 \family roman
@@ -851,6 +1653,22 @@ Z=X*Y
 \noun default
 \color inherit
 9
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+FloatBarrier
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*
@@ -882,6 +1700,22 @@ Z=X*Y
 10
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+FloatBarrier
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section*
 שאלה
 \family roman
@@ -909,6 +1743,22 @@ Z=X*Y
 \noun default
 \color inherit
 11
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+FloatBarrier
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*
@@ -940,9 +1790,112 @@ Z=X*Y
 12
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+FloatBarrier
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Part
 \start_of_appendix
 קוד
+\end_layout
+
+\begin_layout Section*
+שאלה
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\end_layout
+
+\begin_layout Section*
+שאלה
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\end_layout
+
+\begin_layout Section*
+שאלה
+\family roman
+\series bold
+\shape up
+\size larger
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+3
 \end_layout
 
 \begin_layout Section*
