@@ -121,6 +121,30 @@
 תיאורטי
 \end_layout
 
+\begin_layout Standard
+נגדיר את הקונבולוציה של שתי מטריצות 
+\begin_inset Formula $X,Y$
+\end_inset
+
+ כך: 
+\begin_inset Formula 
+\[
+Z\left[m,n\right]=\sum_{i=-\infty}^{\infty}\sum_{j=-\infty}^{\infty}X\left[i,j\right]Y\left[m-i,n-j\right]
+\]
+
+\end_inset
+
+ונסמן: 
+\begin_inset Formula 
+\[
+Z=X*Y
+\]
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section*
 שאלה
 \family roman
@@ -148,6 +172,42 @@
 \noun default
 \color inherit
 1
+\end_layout
+
+\begin_layout Standard
+נראה שקונבולוציה היא אסוציאטיבית.
+ יהיו 
+\begin_inset Formula $X,Y,Z$
+\end_inset
+
+ מטריצות.
+ אזי: 
+\begin_inset Formula 
+\begin{align*}
+\left(\left(X*Y\right)*Z\right)\left[l,k\right] & =\sum_{m=-\infty}^{\infty}\sum_{n=-\infty}^{\infty}\left(X*Y\right)\left[m,n\right]Z\left[l-m,k-n\right]\\
+ & =\sum_{m=-\infty}^{\infty}\sum_{n=-\infty}^{\infty}\left(\sum_{i=-\infty}^{\infty}\sum_{j=-\infty}^{\infty}X\left[i,j\right]Y\left[m-i,n-j\right]\right)Z\left[l-m,k-n\right]\\
+ & =\sum_{m=-\infty}^{\infty}\sum_{n=-\infty}^{\infty}\sum_{i=-\infty}^{\infty}\sum_{j=-\infty}^{\infty}\left(X\left[i,j\right]Y\left[m-i,n-j\right]Z\left[l-m,k-n\right]\right)\\
+ & =\sum_{i=-\infty}^{\infty}\sum_{j=-\infty}^{\infty}\sum_{m=-\infty}^{\infty}\sum_{n=-\infty}^{\infty}X\left[i,j\right]Y\left[m-i,n-j\right]Z\left[l-m,k-n\right]\\
+ & =\sum_{i=-\infty}^{\infty}\sum_{j=-\infty}^{\infty}X\left[i,j\right]\sum_{m=-\infty}^{\infty}\sum_{n=-\infty}^{\infty}Y\left[m-i,n-j\right]Z\left[l-m,k-n\right]\\
+ & =\sum_{i=-\infty}^{\infty}\sum_{j=-\infty}^{\infty}X\left[i,j\right]\sum_{m=-\infty}^{\infty}\sum_{n=-\infty}^{\infty}Y\left[m,n\right]Z\left[\left(l-i\right)-m,\left(k-j\right)-n\right]\\
+ & =\sum_{i=-\infty}^{\infty}\sum_{j=-\infty}^{\infty}X\left[i,j\right]\left(Y*Z\right)\left[l-i,k-j\right]=\left(X*\left(Y*Z\right)\right)\left[l,k\right]
+\end{align*}
+
+\end_inset
+
+לכל 
+\begin_inset Formula $l,k$
+\end_inset
+
+, ולכן שוויון מתקיים: 
+\begin_inset Formula 
+\[
+\left(X*Y\right)*Z=X*\left(Y*Z\right)
+\]
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section*
@@ -179,6 +239,39 @@
 2
 \end_layout
 
+\begin_layout Standard
+יהיו 
+\begin_inset Formula $a,b$
+\end_inset
+
+ סקלרים ו-
+\begin_inset Formula $X,Y,Z$
+\end_inset
+
+ מטריצות.
+ אזי: 
+\begin_inset Formula 
+\begin{align*}
+\left(X*\left(aY+bZ\right)\right)\left[m,n\right] & =\sum_{i=-\infty}^{\infty}\sum_{j=-\infty}^{\infty}X\left[i,j\right]\left(aY+bZ\right)\left[m-i,n-j\right]\\
+ & =\sum_{i=-\infty}^{\infty}\sum_{j=-\infty}^{\infty}X\left[i,j\right]aY\left[m-i,n-j\right]+X\left[i,j\right]bZ\left[m-i,n-j\right]\\
+ & =\sum_{i=-\infty}^{\infty}\sum_{j=-\infty}^{\infty}\left(X\left[i,j\right]aY\left[m-i,n-j\right]\right)+\sum_{i=-\infty}^{\infty}\sum_{j=-\infty}^{\infty}\left(X\left[i,j\right]bZ\left[m-i,n-j\right]\right)\\
+ & =a\sum_{i=-\infty}^{\infty}\sum_{j=-\infty}^{\infty}\left(X\left[i,j\right]Y\left[m-i,n-j\right]\right)+b\sum_{i=-\infty}^{\infty}\sum_{j=-\infty}^{\infty}\left(X\left[i,j\right]Z\left[m-i,n-j\right]\right)\\
+ & =aX*Y\left[m,n\right]+bX*Z\left[m,n\right]
+\end{align*}
+
+\end_inset
+
+לכל 
+\begin_inset Formula $m,n$
+\end_inset
+
+, לכן מתקיים 
+\begin_inset Formula $X*\left(aY+bZ\right)=aX*Y+bX*Z$
+\end_inset
+
+.
+\end_layout
+
 \begin_layout Section*
 שאלה
 \family roman
@@ -208,6 +301,288 @@
 3
 \end_layout
 
+\begin_layout Standard
+עבור 
+\begin_inset Formula $K_{x},K_{y}$
+\end_inset
+
+ נגדיר את הלפלסיאן של 
+\begin_inset Formula $I$
+\end_inset
+
+ באופן הבא: 
+\begin_inset Formula 
+\[
+\nabla^{2}I=\left(I*K_{x}\right)*K_{x}+\left(I*K_{y}\right)*K_{y}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+נניח ש-
+\begin_inset Formula $K_{x}=\frac{1}{2}\begin{pmatrix}1 & -1\end{pmatrix},K_{y}=\frac{1}{2}\begin{pmatrix}-1\\
+1
+\end{pmatrix}$
+\end_inset
+
+ ונגדיר 
+\begin_inset Formula $K_{l}=\frac{1}{4}\begin{pmatrix} & 1\\
+1 & -4 & 1\\
+ & 1
+\end{pmatrix}$
+\end_inset
+
+.
+ מתקיים: 
+\begin_inset Formula 
+\begin{align*}
+\nabla^{2}I & \overset{1}{=}\left(I*K_{x}\right)*K_{x}+\left(I*K_{y}\right)*K_{y}\overset{2}{=}I*\left(K_{x}*K_{x}\right)+I*\left(K_{y}*K_{y}\right)\\
+ & \overset{3}{=}I*\left(K_{x}*K_{x}+K_{y}*K_{y}\right)\overset{4}{=}I*\left(\left(\frac{1}{2}\begin{pmatrix}1 & -1\end{pmatrix}\right)*\left(\frac{1}{2}\begin{pmatrix}1 & -1\end{pmatrix}\right)+\left(\frac{1}{2}\begin{pmatrix}-1\\
+1
+\end{pmatrix}\right)*\left(\frac{1}{2}\begin{pmatrix}-1\\
+1
+\end{pmatrix}\right)\right)\\
+ & \overset{5}{=}I*\left(\frac{1}{4}\begin{pmatrix}1 & -2 & 1\end{pmatrix}+\frac{1}{4}\begin{pmatrix}1\\
+-2\\
+1
+\end{pmatrix}\right)\overset{6}{=}I*\frac{1}{4}\begin{pmatrix} & 1\\
+1 & -4 & 1\\
+ & 1
+\end{pmatrix}\overset{7}{=}I*K_{l}
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+כאשר: 
+\end_layout
+
+\begin_layout Enumerate
+מהגדרת הלפלסיאן
+\end_layout
+
+\begin_layout Enumerate
+שאלה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+1
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+)אסוציאטיביות הקונבולציה(
+\end_layout
+
+\begin_layout Enumerate
+שאלה
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+2
+\end_layout
+
+\begin_layout Enumerate
+הגדרת 
+\begin_inset Formula $K_{x},K_{y}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+הגדרת הקונבולוציה.
+ למשל, 
+\begin_inset Formula $\left(K_{x}'*K_{x}'\right)\left[0,0\right]$
+\end_inset
+
+ כאשר 
+\begin_inset Formula $K'_{x}=\begin{pmatrix}1 & -1\end{pmatrix}$
+\end_inset
+
+ היא: 
+\begin_inset Formula 
+\begin{align*}
+\left(\begin{pmatrix}1 & -1\end{pmatrix}*\begin{pmatrix}1 & -1\end{pmatrix}\right)\left[0,0\right] & =\sum_{i=-\infty}^{\infty}\sum_{j=-\infty}^{\infty}\begin{pmatrix}1 & -1\end{pmatrix}\left[i,j\right]\begin{pmatrix}1 & -1\end{pmatrix}\left[0-i,0-j\right]\\
+ & =\sum_{j=-\infty}^{\infty}\begin{pmatrix}1 & -1\end{pmatrix}\left[0,j\right]\begin{pmatrix}1 & -1\end{pmatrix}\left[0,-j\right]\\
+ & =\sum_{j=-1}^{1}\begin{pmatrix}1 & -1\end{pmatrix}\left[0,j\right]\begin{pmatrix}1 & -1\end{pmatrix}\left[0,-j\right]\\
+ & =0\cdot\left(-1\right)+1\cdot1+\left(-1\right)\cdot0=1
+\end{align*}
+
+\end_inset
+
+ובאופן דומה 
+\begin_inset Formula $\left(K_{x}'*K_{x}'\right)\left[0,1\right]=-2$
+\end_inset
+
+ ו-
+\begin_inset Formula $\left(K_{x}'*K_{x}'\right)\left[0,2\right]=1$
+\end_inset
+
+ ולכן 
+\begin_inset Formula $K_{x}*K_{x}=\frac{1}{4}\begin{pmatrix}1 & -2 & 1\end{pmatrix}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+הגדרת חיבור מטריצות )בהתאם להנחות בתרגיל שחלק שאינו מוגדר במטריצה הוא
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\numeric on
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+0
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+ושהאיבר האמצעי במטריצה הוא האינדקס ה-
+\numeric on
+0
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\numeric off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\strikeout default
+\uuline default
+\uwave default
+\noun default
+\color inherit
+בכל מימד(
+\end_layout
+
+\begin_layout Enumerate
+הגדרת 
+\begin_inset Formula $K_{l}$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section*
 שאלה
 \family roman
@@ -235,6 +610,69 @@
 \noun default
 \color inherit
 4
+\end_layout
+
+\begin_layout Standard
+נניח שקיים 
+\begin_inset Formula $K_{\alpha}$
+\end_inset
+
+ כך ש-
+\begin_inset Formula $K_{l}*K_{\alpha}=\bar{\delta}$
+\end_inset
+
+ כאשר: 
+\begin_inset Formula 
+\[
+\overline{\delta}\left[i,j\right]=\begin{cases}
+1 & i,j=\left(0,0\right)\\
+0 & \text{otherwise}
+\end{cases}
+\]
+
+\end_inset
+
+נשים לב: 
+\begin_inset Formula 
+\[
+\left(\nabla^{2}I\right)*K_{\alpha}=\left(I*K_{l}\right)*K_{\alpha}=I*\left(K_{l}*K_{\alpha}\right)=I*\overline{\delta}
+\]
+
+\end_inset
+
+מהגדרת הקונבולוציה, לכל 
+\begin_inset Formula $m,n$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+\left(I*\overline{\delta}\right)\left[m,n\right]=\sum_{i=-\infty}^{\infty}\sum_{j=-\infty}^{\infty}I\left[i,j\right]\overline{\delta}\left[m-i,n-j\right]=I\left[m,n\right]
+\]
+
+\end_inset
+
+כאשר המעבר האחרון נובע מהגדרת 
+\begin_inset Formula $\overline{\delta}$
+\end_inset
+
+: 
+\begin_inset Formula 
+\[
+\overline{\delta}\left[m-i,n-j\right]=1\iff m-i=n-j=0\iff i=m,j=n
+\]
+
+\end_inset
+
+ולכן: 
+\begin_inset Formula 
+\[
+\left(\nabla^{2}I\right)*K_{\alpha}=I
+\]
+
+\end_inset
+
+כנדרש.
 \end_layout
 
 \begin_layout Part
